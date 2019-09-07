@@ -1,4 +1,10 @@
 import React from "react";
+import Checkout from "./components/Checkout";
+import Contact from "./components/Contact";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import NotFound from "./components/NotFound";
+import Product from "./components/Product";
 import logo from "./logo.svg";
 import "./sass/App.scss";
 
