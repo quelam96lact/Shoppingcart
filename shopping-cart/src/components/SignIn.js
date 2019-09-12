@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from "react-redux";
-import { Button, Form, FormGroup } from "react-bootstrap";
+import { Button, Form, FormGroup, Nav } from "react-bootstrap";
 
-const SignUp = props => {
+const SignIn = props => {
     return (
         <Form>
             <FormGroup controlId="email">
@@ -12,10 +12,11 @@ const SignUp = props => {
             </FormGroup>
             <FormGroup controlId="password">
                 <Form.Label>Password</Form.Label>
+                <Nav.Link>Forgot your password?</Nav.Link>
                 <Form.Control autoFocus type="password" placeholder="Enter password" />
             </FormGroup>
             <Button block type="submit">
-                Sign Up
+                Sign In
             </Button>
         </Form>
     );
@@ -24,4 +25,4 @@ const SignUp = props => {
 export default connect(
     null,
     null
-)(SignUp);
+)(SignIn);
