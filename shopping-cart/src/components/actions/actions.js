@@ -54,13 +54,20 @@ export function setProducts(products) {
 
 export function fetchProducts() {
     return dispatch => {
-        axios.get("https://mapi.sendo.vn/mob/product/cat/phu-kien-cong-nghe/phu-kien-may-tinh-laptop/usb/?p=2").then(res => {
-            const products = res.data.data.map(item => ({
-                name: item.shop_name,
-                id: item.id,
-                price: item.final_price
-            }));
-            dispatch(setProducts(products));
-        });
+        axios
+            .get(
+                "https://mapi.sendo.vn/mob/product/cat/phu-kien-cong-nghe/phu-kien-may-tinh-laptop/usb/?p=1"
+            )
+            .then(res => {
+                const products = res.data.data.map(item => ({
+                    id: item.id,
+                    name: item.name,
+                    img: item.img_url_mob,
+                    original_price: item.original_price,
+                    price: item.final_price,
+                    rate: item.percent_star
+                }));
+                dispatch(setProducts(products));
+            });
     };
 }

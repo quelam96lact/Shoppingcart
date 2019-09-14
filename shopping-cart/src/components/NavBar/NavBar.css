@@ -1,0 +1,12 @@
+.navbar-nav > .nav-item > a {
+    color: #000;
+    text-decoration: none;
+    font-size: 17px;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+    padding: 20px 8px;
+}
+.navbar-nav > .nav-item > a:hover,
+a:focus {
+    color: #fb5c42;
+    outline: 0;
+}
